@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trilha do CSS</title>
+</head>
+<style>
+    body {
+        font-family: Roboto, sans-serif;
+    }
+
+    .exemplos {
+        background-color: palevioletred;
+        width: 200px;
+        height: 200px;
+        border-width: 10px 20px 10px;
+        border-color: purple;
+        border-style: groove;
+        border-radius: 10px;
+    }
+
+    .exemplo {
+        background-color: black;
+        width: 200px;
+        height: 200px;
+        border: 10px solid;
+
+    }
+
+    #exemplo-1 {
+        border-image-source: url('https://jornaldaorla.com.br/wp-content/uploads/2025/02/53940541523_ce38634aaf_c-e1738433988307.jpg');
+    }
+    #exemplo-2 {
+        border-image-source:linear-gradient(red, blue);
+    }
+</style>
+
+<body>
+    <h1>Bordas</h1>
+    <p>Podemos definir as configurações das nossas bordas através das propriedades:</p>
+
+    <ul>
+        <li>border-width</li>
+        <li>border-style</li>
+        <li>border-color</li>
+    </ul>
+
+    <h2>Exemplos</h2>
+    <div class="exemplos">
+        <p>Texto dentro do div</p>
+    </div>
+
+    <br>
+    <br><br><br>
+
+    <h1>Bordas com Imagens</h1>
+    <ul>
+        <li>border-image-source</li>
+        <li>border-image-width</li>
+        <li>border-image-repeat</li>
+        <li>border-image-outset</li>
+        <li>border-image-slice</li>
+    </ul>
+
+    <h3>Exemplo:</h3>
+    <div id="exemplo-1" class="exemplo">
+    </div>
+    <div id="exemplo-2" class="exemplo">
+    </div>
+
+</body>
+</html>
