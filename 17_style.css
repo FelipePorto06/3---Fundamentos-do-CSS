@@ -1,0 +1,30 @@
+.container {
+    background: palegreen;
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+
+    display: flex;
+}
+
+.item {
+    background: orange;
+    margin: 10px;
+}
+
+#container-01{
+    flex-direction: row;
+}
+
+#container-02{
+    flex-direction: column;
+}
+
+#container-03{
+    flex-wrap: wrap-reverse;
+}
+
+#container-04{
+    flex-flow: row wrap;
+    height: 300px;
+}
