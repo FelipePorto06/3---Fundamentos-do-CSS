@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>YouTube Clone</h1>
+    <div class="video-grid" id="videoGrid"></div>
+
+    <script>
+        const videoGrid = document.getElementById('videoGrid');
+
+        function createVideoThumbnails(count) {
+            for (let i = 0; i < count; i++) {
+                const videoItem = document.createElement('div');
+                videoItem.className = 'video-item';
+
+                // Cria o thumbnail
+                const thumbnail = document.createElement('div');
+                thumbnail.className = 'video-thumbnail';
+                thumbnail.textContent = `Vídeo ${videoGrid.children.length + 1}`;
+
+                // Cria as informações do vídeo
+                const info = document.createElement('div');
+                info.className = 'video-info';
+
+                const channel = document.createElement('p');
+                channel.className = 'channel-name';
+                channel.textContent = 'Nome do Canal';
+
+                const stats = document.createElement('div');
+                stats.className = 'video-stats';
+
+                const views = document.createElement('span');
+                views.className = 'views';
+                views.textContent = '123 mil visualizações';
+
+                const separator = document.createElement('span');
+                separator.textContent = ' | ';
+
+                const likes = document.createElement('span');
+                likes.className = 'likes';
+                likes.textContent = '456 likes';
+
+                stats.appendChild(views);
+                stats.appendChild(separator);
+                stats.appendChild(likes);
+
+                info.appendChild(channel);
+                info.appendChild(stats);
+
+                videoItem.appendChild(thumbnail);
+                videoItem.appendChild(info);
+
+                videoGrid.appendChild(videoItem);
+            }
+        }
+
+        // Inicialmente carrega 18 vídeos
+        createVideoThumbnails(18);
+
+        // Carrega mais vídeos ao rolar a página
+        window.addEventListener('scroll', () => {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+                createVideoThumbnails(9);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+.container {
+    background: yellow;
+    padding: 10px;
+    margin-bottom: 20px;
+
+    display: grid;
+    grid-template-columns: 200px 100px 200px;
+    grid-template-rows: 100px 100px 100px;
+}
+
+
+.item {
+    border: 1px solid black;
+}
+
+.item-1 {
+    background: palevioletred;
+}
+
+.item-2 {
+    background: lightblue;
+}
+
+.item-3 {
+    background: lightgreen;
+}
+
+.item-4 {
+    background: lightyellow;
+}
+
+.item-5 {
+    background: lightcoral;
+}
+
+.item-6 {
+    background: lightskyblue;
+}
+
+.item-7 {
+    background: lightgrey;
+}
+
+.item-8 {
+    background: lightpink;
+}
+
+.item-9 {
+    background: lightgoldenrodyellow;
+}
+
+.item-10 {
+    background: lightcyan;
+}
+
+.item-11 {
+    background: lightsalmon;
+}
+
+.item-12 {
+    background: white;
+}
